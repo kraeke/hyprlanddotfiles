@@ -1,0 +1,65 @@
+{
+    // BAR SETTINGS
+    "layer": "top",             // Position: top (default) or bottom
+    "position": "top",          // Bar placement on the screen
+    "height": 40,               // Bar height in pixels
+    "spacing": 5,               // Spacing between modules
+    "border-radius": 10,
+
+    // MODULE PLACEMENT
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "hyprland/window" // Active window title
+    ],
+    "modules-right": [
+        "hyprland/language", // Keyboard layout (fr_CH, us, etc.)
+        "pulseaudio",        // Volume control
+        "clock",              // Time and Date
+	"tray",
+	"battery"
+    ],
+
+    // MODULE CONFIGURATIONS
+
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "all-outputs": true,
+        "on-click": "activate"
+    },
+
+    "hyprland/language": {
+        "format": " {layout}" // Using Nerd Font Icon
+    },
+
+    "pulseaudio": {
+        "format": " {volume}%", // Speaker icon + volume
+        "format-muted": " Muted" // Muted icon
+    },
+
+    "clock": {
+        "format": " {:%H:%M}", // Clock icon + time
+        "tooltip-format": "{:%Y-%m-%d %H:%M:%S}"
+    },
+
+    "tray": {
+        "icon-size": 18,
+        "spacing": 5
+    },
+
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-charging": " {capacity}% {icon}",  // Lightning bolt icon when charging
+        "format-full": " Full",
+        "format-alt": "{time} {icon}", // Shows time remaining on Alt press
+
+        "states": {
+            "warning": 30,  // Apply 'warning' CSS class below 30%
+            "critical": 15  // Apply 'critical' CSS class below 15%
+        },
+
+        // Nerd Font Icons for different battery levels (from low to high)
+        "format-icons": ["", "", "", "", ""]
+    }
+}

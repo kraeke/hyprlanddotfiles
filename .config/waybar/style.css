@@ -1,0 +1,76 @@
+/* --------------------------------------------------------
+ * WAYBAR STYLE: Muted Rose Palette (Final Version)
+ * Fix: Uses standard hex for general background color.
+ * -------------------------------------------------------- */
+
+* {
+    /* Set a unified font for consistency (if Nerd Font is installed) */
+    font-family: FiraCode Nerd Font; 
+    font-size: 13px;
+    min-height: 0;
+    border-radius: 0;
+}
+
+/* === GENERAL BAR STYLE === */
+#waybar {
+    /* FIXED: Using solid hex color to avoid GTK parsing errors */
+    /*background-color: #1D213C;*/ 
+    background-color: transparent;
+    color: #E0E3F0; /* Soft Off-White text */
+    margin: 10px 15px 0px 15px; 
+    padding: 0px 5px;
+}
+
+/* === MODULE CONTAINERS === */
+#clock,
+#pulseaudio,
+#hyprland-language,
+#battery,
+#tray {
+    /* Use the dark slate blue (#383F5D) for module backgrounds */
+    background-color: #383F5D;
+    padding: 0 10px;
+    margin: 4px 2px;
+    border-radius: 6px;
+}
+
+
+/* === WORKSPACE BUTTONS === */
+#workspaces button {
+    padding: 5px 10px;
+    background: transparent;
+    color: #E0E3F0; 
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* Active Workspace (Use Muted Purple Accent) */
+#workspaces button.active {
+    background-color: #80658A;
+    border-bottom: 2px solid #80658A;
+    border-radius: 5px;
+    color: #E0E3F0;
+}
+
+/* === MODULE STATUSES (WARNINGS/CRITICAL) === */
+
+/* Battery (Charging) */
+#battery.charging {
+    color: #A3BE8C; /* Soft Green */
+}
+
+/* Battery (Warning - Below 30%) */
+#battery.warning {
+    color: #EBCB8B; /* Yellow/Amber */
+}
+
+/* Battery (Critical - Below 15%) */
+#battery.critical {
+    background-color: #B35F66; /* Deep Rose/Red Background */
+    color: #1D213C; /* Dark text on red background for contrast */
+}
+
+/* === TRAY ICON CONTAINER === */
+#tray {
+    padding: 0 10px;
+}

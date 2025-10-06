@@ -8,5 +8,5 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ll='ls -laH'
-alias hyprconfig='vim ~/.config/hypr/hyprland.conf'
+alias hyprconfig='vim ~/hyprlanddotfiles/.config/hypr/hyprland.conf'
 PS1='[\u@\h \W]\$ '
